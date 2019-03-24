@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://aizhengpeng.cn/software/tex/latex-manual/</loc>
+    
+    <lastmod>2019-03-24T12:15:19.717Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://aizhengpeng.cn/computer/acm-computing-classification-system/</loc>
     
     <lastmod>2019-03-24T12:06:25.210Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>https://aizhengpeng.cn/others/how-to-start-a-personal-website/</loc>
     
     <lastmod>2019-03-24T12:02:34.885Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://aizhengpeng.cn/software/latex-manual/</loc>
-    
-    <lastmod>2019-03-24T11:53:27.931Z</lastmod>
     
   </url>
   

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://aizhengpeng.cn/"/>
-  <updated>2019-03-24T11:53:27.931Z</updated>
+  <updated>2019-03-24T12:15:19.717Z</updated>
   <id>https://aizhengpeng.cn/</id>
   
   <author>
@@ -18,10 +18,10 @@
   
   <entry>
     <title>LaTex手册（长期更新）</title>
-    <link href="https://aizhengpeng.cn/software/latex-manual/"/>
-    <id>https://aizhengpeng.cn/software/latex-manual/</id>
+    <link href="https://aizhengpeng.cn/software/tex/latex-manual/"/>
+    <id>https://aizhengpeng.cn/software/tex/latex-manual/</id>
     <published>2019-03-24T08:08:54.000Z</published>
-    <updated>2019-03-24T11:53:27.931Z</updated>
+    <updated>2019-03-24T12:15:19.717Z</updated>
     
     <content type="html"><![CDATA[<p>LaTex作为论文写作的常用工具，收到广大科研人员的欢迎。本文旨在记录本人使用LaTeX的方法、技巧以及遇到的问题，将长期更新。</p><a id="more"></a><h2 id="安装LaTeX写作环境"><a href="#安装LaTeX写作环境" class="headerlink" title="安装LaTeX写作环境"></a>安装LaTeX写作环境</h2><ul><li>安装用于中文科技排版的<a href="http://www.ctex.org/HomePage" target="_blank" rel="noopener">CTeX</a>套装。</li><li>安装用于编辑LaTeX的<a href="http://texstudio.sourceforge.net" target="_blank" rel="noopener">TeXStudio</a>软件。</li></ul><p>未完待续。</p>]]></content>
     
@@ -32,6 +32,8 @@
     </summary>
     
       <category term="软件" scheme="https://aizhengpeng.cn/categories/software/"/>
+    
+      <category term="TeX" scheme="https://aizhengpeng.cn/categories/software/tex/"/>
     
     
       <category term="LaTeX" scheme="https://aizhengpeng.cn/tags/latex/"/>
