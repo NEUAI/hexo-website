@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://aizhengpeng.cn/"/>
-  <updated>2019-03-09T04:42:37.169Z</updated>
+  <updated>2019-03-24T08:00:55.999Z</updated>
   <id>https://aizhengpeng.cn/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ACM计算机学分类系统</title>
+    <link href="https://aizhengpeng.cn/%E5%88%86%E7%B1%BB%E7%B3%BB%E7%BB%9F/acm-computing-classification-system/"/>
+    <id>https://aizhengpeng.cn/分类系统/acm-computing-classification-system/</id>
+    <published>2019-03-24T02:04:42.000Z</published>
+    <updated>2019-03-24T08:00:55.999Z</updated>
+    
+    <content type="html"><![CDATA[<p>ACM计算机学分类系统（CCS）是由国际计算机协会（ACM）设计的计算机学主题分类系统。该系统与数学主题分类（MSC）在范围、目的和结构上类似，被用于多种ACM期刊的分领域主题编排。</p><a id="more"></a><h2 id="历史"><a href="#历史" class="headerlink" title="历史"></a>历史</h2><p>该系统历经七个修订，初版发布于1964年，修订版本发表于1982年、1983年、1987年、1991年、1998年和2012年（现行版本）。</p><h2 id="结构"><a href="#结构" class="headerlink" title="结构"></a>结构</h2><ul><li>概述与参考（General and reference）<ul><li>文档类型（Document types）</li><li>交叉计算工具与技术（Cross-computing tools and techniques）</li></ul></li><li>硬件（Hardware）<ul><li>印刷电路板（Printed circuit boards）</li><li>通信硬件、接口与存储（Communication hardware, interfaces and storage）</li><li>集成电路（Integrated circuits）</li><li>超大规模集成设计（Very large scale integration design）</li><li>功率与能量（Power and energy）</li><li>电子设计自动化（Electronic design automation）</li><li>硬件验证（Hardware validation）</li><li>硬件测试（Hardware test）</li><li>稳健性（Robustness）</li><li>新兴技术（Emerging technologies）</li></ul></li><li>计算机系统组成（Computer systems organization）<ul><li>体系结构（Architectures）</li><li>嵌入式和网络物理系统（Embedded and cyber-physical systems）</li><li>实时系统（Real-time systems）</li><li>可分配和故障容忍系统与网络（Dependable and fault-tolerant systems and networks）</li></ul></li><li>网络（Networks）<ul><li>网络体系结构（Network architectures）</li><li>网络协议（Network protocols）</li><li>网络组件（Network components）</li><li>网络算法（Network algorithms）</li><li>网络性能评估（Network performance evaluation）</li><li>网络特性（Network properties）</li><li>网络服务（Network services）</li><li>网络类型（Network types）</li></ul></li><li>软件与软件工程（Software and its engineering）<ul><li>软件组成与特性（Software organization and properties）</li><li>软件符号与工具（Software notations and tools）</li><li>软件创造与管理（Software creation and management）</li></ul></li><li>计算理论（Theory of computation）<ul><li>计算模型（Models of computation）</li><li>形式语言与自动机理论（Formal languages and automata theory）</li><li>计算复杂性与密码学（Computational complexity and cryptography）</li><li>逻辑学（Logic）</li><li>算法设计与分析（Design and analysis of algorithms）</li><li>随机、几何学与离散结构（Randomness, geometry and discrete structures）</li><li>应用领域的理论与算法（Theory and algorithms for application domains）</li><li>语义学与推理（Semantics and reasoning）</li></ul></li><li>计算数学（Mathematics of computing）<ul><li>离散数学（Discrete mathematics）</li><li>概率与统计（Probability and statistics）</li><li>数学软件（Mathematical software）</li><li>信息论（Information theory）</li><li>数学分析（Mathematical analysis）</li><li>连续数学（Continuous mathematics）</li></ul></li><li>信息系统（Information systems）<ul><li>数据管理系统（Data management systems）</li><li>信息存储系统（Information storage systems）</li><li>信息系统应用（Information systems applications）</li><li>万维网（World Wide Web）</li><li>信息检索（Information retrieval）</li></ul></li><li>安全与隐私（Security and privacy）<ul><li>密码学（Cryptography）</li><li>正规的安全方法与理论（Formal methods and theory of security）</li><li>安全服务（Security services）</li><li>入侵/异常检测与恶意软件缓解（Intrusion/anomaly detection and malware mitigation）</li><li>硬件安全（Security in hardware）</li><li>系统安全（Systems security）</li><li>网络安全（Network security）</li><li>数据库与存储安全（Database and storage security）</li><li>软件与应用安全（Software and application security）</li><li>安全与隐私的人与社会方面（Human and societal aspects of security and privacy）</li></ul></li><li>以人为中心的计算（Human-centered computing）<ul><li>人机交互（Human–computer interaction）</li><li>交互设计（Interaction design）</li><li>协作与社会计算（Collaborative and social computing）</li><li>普适移动计算（Ubiquitous and mobile computing）</li><li>虚拟化（Visualization）</li><li>可访问性（Accessibility）</li></ul></li><li>计算方法（Computing methodologies）<ul><li>符号和代数操作（Symbolic and algebraic manipulation）</li><li>并行计算方法（Parallel computing methodologies）</li><li>人工智能（Artificial intelligence）</li><li>机器学习（Machine learning）</li><li>建模与模拟（Modeling and simulation）</li><li>计算机图形（Computer graphics）</li><li>分布式计算方法（Distributed computing methodologies）</li><li>量子计算方法（Concurrent computing methodologies）</li></ul></li><li>应用计算（Applied computing）<ul><li>电子商务（Electronic commerce）</li><li>企业计算（Enterprise computing）</li><li>物理科学与工程（Physical sciences and engineering）</li><li>生命与医学（Life and medical sciences）</li><li>法律、社会与行为科学（Law, social and behavioral sciences）</li><li>计算机取证（Computer forensics）</li><li>艺术与人文（Arts and humanities）</li><li>其他领域中的计算机（Computers in other domains）</li><li>运筹学（Operations research）</li><li>教育（Education）</li><li>文档管理与文本处理（Document management and text processing）</li></ul></li><li>社会与专业主题（Social and professional topics）<ul><li>专业主题（Professional topics）</li><li>计算/技术政策（Computing/technology policy）</li><li>用户特征（User characteristics）</li></ul></li><li>适当名词：人员、技术与公司（Proper nouns: people, technologies and companies）<ul><li>公司（Companies）</li><li>组织（Organizations）</li><li>从事计算机工作的人员（People in computing）</li><li>技术（Technologies）</li></ul></li></ul><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ul><li><a href="https://www.acm.org/publications/class-2012" target="_blank" rel="noopener">The 2012 ACM Computing Classification System</a></li><li><a href="https://en.wikipedia.org/wiki/ACM_Computing_Classification_System" target="_blank" rel="noopener">ACM Computing Classification System - Wikipedia</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;ACM计算机学分类系统（CCS）是由国际计算机协会（ACM）设计的计算机学主题分类系统。该系统与数学主题分类（MSC）在范围、目的和结构上类似，被用于多种ACM期刊的分领域主题编排。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="分类系统" scheme="https://aizhengpeng.cn/categories/%E5%88%86%E7%B1%BB%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+      <category term="计算机" scheme="https://aizhengpeng.cn/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
+    
+  </entry>
   
   <entry>
     <title>如何开办个人网站</title>
