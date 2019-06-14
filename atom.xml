@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://aizhengpeng.cn/"/>
-  <updated>2019-03-30T14:00:00.000Z</updated>
+  <updated>2019-06-14T07:03:10.016Z</updated>
   <id>https://aizhengpeng.cn/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>东北大学学士论文模版</title>
+    <link href="https://aizhengpeng.cn/teaching-research/templates-of-neu-bachelor-thesis/"/>
+    <id>https://aizhengpeng.cn/teaching-research/templates-of-neu-bachelor-thesis/</id>
+    <published>2019-06-14T07:00:00.000Z</published>
+    <updated>2019-06-14T07:03:10.016Z</updated>
+    
+    <content type="html"><![CDATA[<p>东北大学本科生毕业设计（论文）模版现已上传至 GitHub，目前已更新软件学院2019年毕设模版。</p><a id="more"></a><h2 id="Microsoft-Word-模版"><a href="#Microsoft-Word-模版" class="headerlink" title="Microsoft Word 模版"></a>Microsoft Word 模版</h2><ul><li>项目主页：<a href="https://github.com/NEUAI/neuthesis-bachelor-msword" target="_blank" rel="noopener">https://github.com/NEUAI/neuthesis-bachelor-msword</a></li><li>下载地址：<a href="https://github.com/NEUAI/neuthesis-bachelor-msword/archive/master.zip" target="_blank" rel="noopener">https://github.com/NEUAI/neuthesis-bachelor-msword/archive/master.zip</a></li><li>Wiki：<a href="https://github.com/NEUAI/neuthesis-bachelor-msword/wiki" target="_blank" rel="noopener">https://github.com/NEUAI/neuthesis-bachelor-msword/wiki</a></li><li>意见反馈：<a href="https://github.com/NEUAI/neuthesis-bachelor-msword/issues" target="_blank" rel="noopener">https://github.com/NEUAI/neuthesis-bachelor-msword/issues</a></li></ul><h2 id="LaTeX-模版"><a href="#LaTeX-模版" class="headerlink" title="LaTeX 模版"></a>LaTeX 模版</h2><ul><li>项目主页：<a href="https://github.com/NEUAI/neuthesis-bachelor" target="_blank" rel="noopener">https://github.com/NEUAI/neuthesis-bachelor</a></li><li>下载地址：<a href="https://github.com/NEUAI/neuthesis-bachelor/archive/master.zip" target="_blank" rel="noopener">https://github.com/NEUAI/neuthesis-bachelor/archive/master.zip</a></li><li>Wiki：<a href="https://github.com/NEUAI/neuthesis-bachelor/wiki" target="_blank" rel="noopener">https://github.com/NEUAI/neuthesis-bachelor/wiki</a></li><li>意见反馈：<a href="https://github.com/NEUAI/neuthesis-bachelor/issues" target="_blank" rel="noopener">https://github.com/NEUAI/neuthesis-bachelor/issues</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;东北大学本科生毕业设计（论文）模版现已上传至 GitHub，目前已更新软件学院2019年毕设模版。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="教学科研" scheme="https://aizhengpeng.cn/categories/teaching-research/"/>
+    
+    
+      <category term="东北大学" scheme="https://aizhengpeng.cn/tags/neu-china/"/>
+    
+      <category term="论文模版" scheme="https://aizhengpeng.cn/tags/paper-template/"/>
+    
+  </entry>
   
   <entry>
     <title>LaTeX手册</title>
