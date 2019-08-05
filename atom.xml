@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://aizhengpeng.cn/"/>
-  <updated>2019-06-14T07:03:10.016Z</updated>
+  <updated>2019-08-05T14:49:56.081Z</updated>
   <id>https://aizhengpeng.cn/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>笔记：交互式信誉系统（更新中）</title>
+    <link href="https://aizhengpeng.cn/information-security/notes-interactive-reputation-systems/"/>
+    <id>https://aizhengpeng.cn/information-security/notes-interactive-reputation-systems/</id>
+    <published>2019-08-05T14:30:00.000Z</published>
+    <updated>2019-08-05T14:49:56.081Z</updated>
+    
+    <content type="html"><![CDATA[<p>英文标题：Interactive Reputation Systems - How to Cope with Malicious Behavior in Feedback Mechanisms</p><p>中文标题：交互式信誉系统——在反馈机制中如何应对恶意行为</p><p>DOI: <a href="https://doi.org/10.1007/s12599-017-0493-1" target="_blank" rel="noopener">10.1007/s12599-017-0493-1</a></p><a id="more"></a><p>定义：交互式信誉系统是一种允许用户动态调节潜在计算机制的信誉系统。</p><p>（未完待续）</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;英文标题：Interactive Reputation Systems - How to Cope with Malicious Behavior in Feedback Mechanisms&lt;/p&gt;
+&lt;p&gt;中文标题：交互式信誉系统——在反馈机制中如何应对恶意行为&lt;/p&gt;
+&lt;p&gt;DOI: &lt;a href=&quot;https://doi.org/10.1007/s12599-017-0493-1&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;10.1007/s12599-017-0493-1&lt;/a&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="信息安全" scheme="https://aizhengpeng.cn/categories/information-security/"/>
+    
+    
+      <category term="信誉系统" scheme="https://aizhengpeng.cn/tags/reputation-system/"/>
+    
+  </entry>
   
   <entry>
     <title>东北大学学士论文模版</title>
