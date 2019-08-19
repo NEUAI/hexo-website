@@ -2,24 +2,27 @@
 <html lang="zh">
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-<title>在Visual Studio中手动配置Qt项目 - 小艾的个人主页</title>
+<title>在 Visual Studio 中手动配置 Qt 项目 - 小艾的个人主页</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-    <meta name="keywords" content="Windows,Visual Studio,Qt">
+    <meta name="description" content="本文将介绍在 Visual Studio 中手动配置 Qt 项目的步骤。">
+<meta name="keywords" content="Windows,Visual Studio,Qt">
 <meta property="og:type" content="article">
-<meta property="og:title" content="在Visual Studio中手动配置Qt项目">
+<meta property="og:title" content="在 Visual Studio 中手动配置 Qt 项目">
 <meta property="og:url" content="https://aizhengpeng.cn/support/manually-configure-qt-project-in-visual-studio/index.html">
 <meta property="og:site_name" content="小艾的个人主页">
+<meta property="og:description" content="本文将介绍在 Visual Studio 中手动配置 Qt 项目的步骤。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-19T05:09:26.079Z">
+<meta property="og:updated_time" content="2019-08-19T06:11:09.202Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="在Visual Studio中手动配置Qt项目">
+<meta name="twitter:title" content="在 Visual Studio 中手动配置 Qt 项目">
+<meta name="twitter:description" content="本文将介绍在 Visual Studio 中手动配置 Qt 项目的步骤。">
 
 
 
-<link rel="alternative" href="/atom.xml" title="在Visual Studio中手动配置Qt项目" type="application/atom+xml">
+<link rel="alternative" href="/atom.xml" title="在 Visual Studio 中手动配置 Qt 项目" type="application/atom+xml">
 
 
 
@@ -89,7 +92,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.png" alt="在Visual Studio中手动配置Qt项目" height="28">
+                <img src="/images/logo.png" alt="在 Visual Studio 中手动配置 Qt 项目" height="28">
             
             </a>
         </div>
@@ -150,7 +153,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    几秒 读完 (大约 1 个字)
+                    4 分钟 读完 (大约 574 个字)
                 </span>
                 
                 
@@ -159,11 +162,34 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                在Visual Studio中手动配置Qt项目
+                在 Visual Studio 中手动配置 Qt 项目
             
         </h1>
         <div class="content">
-            <a id="more"></a>
+            <p>本文将介绍在 Visual Studio 中手动配置 Qt 项目的步骤。</p>
+<a id="more"></a>
+<h2 id="先决条件"><a href="#先决条件" class="headerlink" title="先决条件"></a>先决条件</h2><ul>
+<li>安装含有 Visual C++ 组件的 Visual Studio。</li>
+<li>安装 Qt 库以及适配 msvc 的工具（如：msvc2017-x64）。</li>
+</ul>
+<h2 id="配置步骤"><a href="#配置步骤" class="headerlink" title="配置步骤"></a>配置步骤</h2><p>下面以 Visual Studio 2017 和 Qt 5.11.1 为例，详述配置过程。（以下假设 Qt 的安装位置为 D:\Qt，涉及到文件目录的部分请根据实际情况对应进行修改）</p>
+<ul>
+<li>打开 <strong>Visual Studio 2017</strong>。</li>
+<li>选择“<strong>文件-新建-项目…</strong>”，选择 Visual C++ 中的“<strong>空项目</strong>”，根据实际情况修改名称（如：QtProjectDemo）和位置。</li>
+<li>在“<strong>解决方案资源管理器</strong>” 中，右键点击“<strong>源文件</strong>”，选择“<strong>添加-新建项…</strong>”，选择 Visual C++ 中的“<strong>C++ 文件(.cpp)</strong>”，根据实际情况修改名称（如：QtProjectDemo.cpp）；用同样的方法添加一个“<strong>头文件(.h)</strong>”在“<strong>头文件</strong>”中（如：QtProjectDemo.h）。</li>
+<li>将“<strong>解决方案平台</strong>”修改为“<strong>x64</strong>”。</li>
+<li>选择“<strong>项目-属性</strong>”，将“<strong>配置属性-常规</strong>”中的“<strong>字符集</strong>”修改为“<strong>使用 Unicode 字符集</strong>”。</li>
+<li>将“<strong>配置属性-调试</strong>”中的“<strong>环境</strong>”修改为“<strong>PATH=D:\Qt\5.11.1\msvc2017_64\bin</strong>”。</li>
+<li>将“<strong>配置属性-C/C++-常规</strong>”中的“<strong>附加包含目录</strong>”修改为“<strong>D:\Qt\5.11.1\msvc2017_64\include;%(AdditionalIncludeDirectories)</strong>”。</li>
+<li>将“<strong>配置属性-链接器-常规</strong>”中的“<strong>附加库目录</strong>”修改为“<strong>D:\Qt\5.11.1\msvc2017_64\lib;%(AdditionalLibraryDirectories)</strong>”。</li>
+<li>将“<strong>配置属性-链接器-系统</strong>”中的“<strong>子系统</strong>”修改为“<strong>窗口 (/SUBSYSTEM:WINDOWS)</strong>”。</li>
+<li>将“<strong>配置属性-链接器-高级</strong>”中的“<strong>入口点</strong>”修改为“<strong>mainCRTStartup</strong>”。</li>
+</ul>
+<p>至此，配置部分基本上完成了。</p>
+<h2 id="使用方式"><a href="#使用方式" class="headerlink" title="使用方式"></a>使用方式</h2><ul>
+<li>需要附加依赖项时，需要使用 <code>#pragma comment(lib, &quot;x.lib&quot;)</code> 语句。如使用 <code>#pragma comment(lib, &quot;Qt5Widgets.lib&quot;)</code> 即代表附加了 QtWidgets 库。</li>
+<li>需要包含头文件时，首先需要附加对应的依赖项，然后再使用 <code>#include &lt;x.h&gt;</code> 语句。如使用 <code>#include &lt;QtWidgets/qapplication.h&gt;</code> 即包含了 QApplication 类，但在此之前需要使用 <code>#pragma comment(lib, &quot;Qt5Widgets.lib&quot;)</code> 附加 QtWidgets 库。</li>
+</ul>
 
         </div>
         
@@ -1161,7 +1187,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.png" alt="在Visual Studio中手动配置Qt项目" height="28">
+                    <img src="/images/logo.png" alt="在 Visual Studio 中手动配置 Qt 项目" height="28">
                 
                 </a>
                 <p class="is-size-7">

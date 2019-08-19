@@ -165,21 +165,17 @@
   </entry>
   
   <entry>
-    <title>在Visual Studio中手动配置Qt项目</title>
+    <title>在 Visual Studio 中手动配置 Qt 项目</title>
     <link href="https://aizhengpeng.cn/support/manually-configure-qt-project-in-visual-studio/"/>
     <id>https://aizhengpeng.cn/support/manually-configure-qt-project-in-visual-studio/</id>
     <published>2018-10-15T04:00:00.000Z</published>
-    <updated>2019-08-19T05:09:26.079Z</updated>
+    <updated>2019-08-19T06:11:09.202Z</updated>
     
-    <content type="html"><![CDATA[<a id="more"></a>]]></content>
+    <content type="html"><![CDATA[<p>本文将介绍在 Visual Studio 中手动配置 Qt 项目的步骤。</p><a id="more"></a><h2 id="先决条件"><a href="#先决条件" class="headerlink" title="先决条件"></a>先决条件</h2><ul><li>安装含有 Visual C++ 组件的 Visual Studio。</li><li>安装 Qt 库以及适配 msvc 的工具（如：msvc2017-x64）。</li></ul><h2 id="配置步骤"><a href="#配置步骤" class="headerlink" title="配置步骤"></a>配置步骤</h2><p>下面以 Visual Studio 2017 和 Qt 5.11.1 为例，详述配置过程。（以下假设 Qt 的安装位置为 D:\Qt，涉及到文件目录的部分请根据实际情况对应进行修改）</p><ul><li>打开 <strong>Visual Studio 2017</strong>。</li><li>选择“<strong>文件-新建-项目…</strong>”，选择 Visual C++ 中的“<strong>空项目</strong>”，根据实际情况修改名称（如：QtProjectDemo）和位置。</li><li>在“<strong>解决方案资源管理器</strong>” 中，右键点击“<strong>源文件</strong>”，选择“<strong>添加-新建项…</strong>”，选择 Visual C++ 中的“<strong>C++ 文件(.cpp)</strong>”，根据实际情况修改名称（如：QtProjectDemo.cpp）；用同样的方法添加一个“<strong>头文件(.h)</strong>”在“<strong>头文件</strong>”中（如：QtProjectDemo.h）。</li><li>将“<strong>解决方案平台</strong>”修改为“<strong>x64</strong>”。</li><li>选择“<strong>项目-属性</strong>”，将“<strong>配置属性-常规</strong>”中的“<strong>字符集</strong>”修改为“<strong>使用 Unicode 字符集</strong>”。</li><li>将“<strong>配置属性-调试</strong>”中的“<strong>环境</strong>”修改为“<strong>PATH=D:\Qt\5.11.1\msvc2017_64\bin</strong>”。</li><li>将“<strong>配置属性-C/C++-常规</strong>”中的“<strong>附加包含目录</strong>”修改为“<strong>D:\Qt\5.11.1\msvc2017_64\include;%(AdditionalIncludeDirectories)</strong>”。</li><li>将“<strong>配置属性-链接器-常规</strong>”中的“<strong>附加库目录</strong>”修改为“<strong>D:\Qt\5.11.1\msvc2017_64\lib;%(AdditionalLibraryDirectories)</strong>”。</li><li>将“<strong>配置属性-链接器-系统</strong>”中的“<strong>子系统</strong>”修改为“<strong>窗口 (/SUBSYSTEM:WINDOWS)</strong>”。</li><li>将“<strong>配置属性-链接器-高级</strong>”中的“<strong>入口点</strong>”修改为“<strong>mainCRTStartup</strong>”。</li></ul><p>至此，配置部分基本上完成了。</p><h2 id="使用方式"><a href="#使用方式" class="headerlink" title="使用方式"></a>使用方式</h2><ul><li>需要附加依赖项时，需要使用 <code>#pragma comment(lib, &quot;x.lib&quot;)</code> 语句。如使用 <code>#pragma comment(lib, &quot;Qt5Widgets.lib&quot;)</code> 即代表附加了 QtWidgets 库。</li><li>需要包含头文件时，首先需要附加对应的依赖项，然后再使用 <code>#include &lt;x.h&gt;</code> 语句。如使用 <code>#include &lt;QtWidgets/qapplication.h&gt;</code> 即包含了 QApplication 类，但在此之前需要使用 <code>#pragma comment(lib, &quot;Qt5Widgets.lib&quot;)</code> 附加 QtWidgets 库。</li></ul>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-
-      
+      &lt;p&gt;本文将介绍在 Visual Studio 中手动配置 Qt 项目的步骤。&lt;/p&gt;
     
     </summary>
     
