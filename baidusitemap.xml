@@ -1,22 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://aizhengpeng.cn/support/manually-configure-qt-project-in-visual-studio/</loc>
+    <lastmod>2019-08-19</lastmod>
+  </url>  <url>
+    <loc>https://aizhengpeng.cn/support/deal-with-system-error-dll-is-missing-from-your-computer/</loc>
+    <lastmod>2019-08-19</lastmod>
+  </url>  <url>
+    <loc>https://aizhengpeng.cn/support/deal-with-error-active-developer-path-does-not-exist/</loc>
+    <lastmod>2019-08-19</lastmod>
+  </url>  <url>
+    <loc>https://aizhengpeng.cn/articles/acm-computing-classification-system/</loc>
+    <lastmod>2019-08-19</lastmod>
+  </url>  <url>
+    <loc>https://aizhengpeng.cn/support/install-openssl-on-windows/</loc>
+    <lastmod>2019-08-19</lastmod>
+  </url>  <url>
+    <loc>https://aizhengpeng.cn/support/start-a-personal-website/</loc>
+    <lastmod>2019-08-19</lastmod>
+  </url>  <url>
     <loc>https://aizhengpeng.cn/download/templates-of-neu-bachelor-thesis/</loc>
     <lastmod>2019-08-19</lastmod>
   </url>  <url>
     <loc>https://aizhengpeng.cn/articles/notes-interactive-reputation-systems/</loc>
     <lastmod>2019-08-19</lastmod>
   </url>  <url>
-    <loc>https://aizhengpeng.cn/articles/how-to-start-a-personal-website/</loc>
-    <lastmod>2019-08-19</lastmod>
-  </url>  <url>
-    <loc>https://aizhengpeng.cn/articles/acm-computing-classification-system/</loc>
-    <lastmod>2019-08-19</lastmod>
-  </url>  <url>
     <loc>https://aizhengpeng.cn/news/ethereum-based-blockchain-application-ide/</loc>
     <lastmod>2019-06-14</lastmod>
   </url>  <url>
-    <loc>https://aizhengpeng.cn/articles/latex-manual/</loc>
+    <loc>https://aizhengpeng.cn/support/latex-manual/</loc>
     <lastmod>2019-03-30</lastmod>
   </url>
 </urlset>

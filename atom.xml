@@ -67,21 +67,21 @@
   </entry>
   
   <entry>
-    <title>LaTeX手册</title>
-    <link href="https://aizhengpeng.cn/articles/latex-manual/"/>
-    <id>https://aizhengpeng.cn/articles/latex-manual/</id>
+    <title>LaTeX 使用手册</title>
+    <link href="https://aizhengpeng.cn/support/latex-manual/"/>
+    <id>https://aizhengpeng.cn/support/latex-manual/</id>
     <published>2019-03-24T08:00:00.000Z</published>
     <updated>2019-03-30T14:00:00.000Z</updated>
     
-    <content type="html"><![CDATA[<p>LaTeX作为论文写作的常用工具，收到广大科研人员的欢迎。本文旨在记录本人使用LaTeX的方法、技巧以及遇到的问题，将长期更新。</p><a id="more"></a><h2 id="0-安装与配置LaTeX写作环境"><a href="#0-安装与配置LaTeX写作环境" class="headerlink" title="0 安装与配置LaTeX写作环境"></a>0 安装与配置LaTeX写作环境</h2><ul><li>安装用于中文科技排版的<a href="http://www.ctex.org/HomePage" target="_blank" rel="noopener">CTeX</a>套装。</li><li>安装用于编辑LaTeX的<a href="http://texstudio.sourceforge.net" target="_blank" rel="noopener">TeXStudio</a>软件。</li><li>将TeXStudio的TeX编译器设置为XeLaTeX以支持CJK（默认的PDFLaTeX不支持CJK）。</li></ul><h2 id="1-TeX基础模版"><a href="#1-TeX基础模版" class="headerlink" title="1 TeX基础模版"></a>1 TeX基础模版</h2><p>每个TeX文件一般都包含下列内容：</p><figure class="highlight tex hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">\<span class="hljs-name">documentclass</span><span class="hljs-string">&#123;article&#125;</span></span></span><br><span class="line"><span class="hljs-comment">% 使用宏包</span></span><br><span class="line"><span class="hljs-tag">\<span class="hljs-name">usepackage</span><span class="hljs-string">&#123;xeCJK&#125;</span></span> <span class="hljs-comment">% 适用于XeLaTeX编译器的中文支持宏包</span></span><br><span class="line"><span class="hljs-comment">% 使用其他宏包</span></span><br><span class="line"><span class="hljs-comment">% \usepackage&#123;...&#125;</span></span><br><span class="line"><span class="hljs-comment">% 其他导言区命令</span></span><br><span class="line"><span class="hljs-comment">% ...</span></span><br><span class="line"><span class="hljs-tag">\<span class="hljs-name">begin</span><span class="hljs-string">&#123;document&#125;</span></span></span><br><span class="line">    <span class="hljs-comment">% 其他内容</span></span><br><span class="line">    <span class="hljs-comment">% ...</span></span><br><span class="line"><span class="hljs-tag">\<span class="hljs-name">end</span><span class="hljs-string">&#123;document&#125;</span></span></span><br></pre></td></tr></table></figure><h2 id="2-字体"><a href="#2-字体" class="headerlink" title="2 字体"></a>2 字体</h2><h3 id="2-1-字体、字形与字号"><a href="#2-1-字体、字形与字号" class="headerlink" title="2.1 字体、字形与字号"></a>2.1 字体、字形与字号</h3><p>LaTeX中，字体族分为三种：主要（罗马）、无衬线、等宽（打字机）。一般来说，正文默认使用主要字体，标题使用无衬线字体，代码使用等宽字体。</p><h4 id="2-1-1-全局修改对应族所使用的字体"><a href="#2-1-1-全局修改对应族所使用的字体" class="headerlink" title="2.1.1 全局修改对应族所使用的字体"></a>2.1.1 全局修改对应族所使用的字体</h4><p>（1）中文字体（注：中文必须使用xeCJK宏包，下同）</p><figure class="highlight tex hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">% 添加至导言区</span></span><br><span class="line"><span class="hljs-tag">\<span class="hljs-name">setCJKmainfont</span><span class="hljs-string">[ItalicFont=KaiTi]</span><span class="hljs-string">&#123;SimSun&#125;</span></span> <span class="hljs-comment">% 将宋体设置为中文主要字体，同时将楷体设置为倾斜的中文主要字体</span></span><br><span class="line"><span class="hljs-tag">\<span class="hljs-name">setCJKsansfont</span><span class="hljs-string">&#123;SimHei&#125;</span></span> <span class="hljs-comment">% 将黑体设置为中文无衬线字体</span></span><br><span class="line"><span class="hljs-tag">\<span class="hljs-name">setCJKmonofont</span><span class="hljs-string">&#123;YouYuan&#125;</span></span> <span class="hljs-comment">% 将幼圆设置为中文等宽字体</span></span><br></pre></td></tr></table></figure><p>（2）西文字体</p><figure class="highlight tex hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">% 添加至导言区</span></span><br><span class="line"><span class="hljs-tag">\<span class="hljs-name">setmainfont</span><span class="hljs-string">&#123;Times New Roman&#125;</span></span> <span class="hljs-comment">% 将Times New Roman设置为西文主要字体</span></span><br><span class="line"><span class="hljs-tag">\<span class="hljs-name">setsansfont</span><span class="hljs-string">&#123;Arial&#125;</span></span> <span class="hljs-comment">% 将Arial设置为西文无衬线字体</span></span><br><span class="line"><span class="hljs-tag">\<span class="hljs-name">setmonofont</span><span class="hljs-string">&#123;Courier New&#125;</span></span> <span class="hljs-comment">% 将Courier New设置为西文等宽字体</span></span><br></pre></td></tr></table></figure><h4 id="2-1-2-应用指定族"><a href="#2-1-2-应用指定族" class="headerlink" title="2.1.2 应用指定族"></a>2.1.2 应用指定族</h4><figure class="highlight tex hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">% 添加至正文区</span></span><br><span class="line"><span class="hljs-tag">\<span class="hljs-name">textrm</span><span class="hljs-string">&#123;text 文本&#125;</span></span> <span class="hljs-comment">% 使用主要（罗马）字体</span></span><br><span class="line"><span class="hljs-tag">\<span class="hljs-name">textsf</span><span class="hljs-string">&#123;text 文本&#125;</span></span> <span class="hljs-comment">% 使用无衬线字体</span></span><br><span class="line"><span class="hljs-tag">\<span class="hljs-name">texttt</span><span class="hljs-string">&#123;text 文本&#125;</span></span> <span class="hljs-comment">% 使用等宽（打字机）字体</span></span><br></pre></td></tr></table></figure><h3 id="2-2-颜色与下划线"><a href="#2-2-颜色与下划线" class="headerlink" title="2.2 颜色与下划线"></a>2.2 颜色与下划线</h3><h4 id="2-2-1-字体颜色"><a href="#2-2-1-字体颜色" class="headerlink" title="2.2.1 字体颜色"></a>2.2.1 字体颜色</h4><h4 id="2-2-2-下划线线型"><a href="#2-2-2-下划线线型" class="headerlink" title="2.2.2 下划线线型"></a>2.2.2 下划线线型</h4><h4 id="2-2-3-下划线颜色"><a href="#2-2-3-下划线颜色" class="headerlink" title="2.2.3 下划线颜色"></a>2.2.3 下划线颜色</h4><h4 id="2-2-4-着重号"><a href="#2-2-4-着重号" class="headerlink" title="2.2.4 着重号"></a>2.2.4 着重号</h4><h3 id="2-3-效果"><a href="#2-3-效果" class="headerlink" title="2.3 效果"></a>2.3 效果</h3><p>删除线、双删除线、上标、下标、小型大写字母、全部大写字母、隐藏</p><h3 id="2-4-字符间距"><a href="#2-4-字符间距" class="headerlink" title="2.4 字符间距"></a>2.4 字符间距</h3><p>缩放、间距、位置</p><h3 id="2-5-高级版式"><a href="#2-5-高级版式" class="headerlink" title="2.5 高级版式"></a>2.5 高级版式</h3><p>连字、数字间距、数字形式、样式集</p><h2 id="3-段落"><a href="#3-段落" class="headerlink" title="3 段落"></a>3 段落</h2><p>未完待续。</p>]]></content>
+    <content type="html"><![CDATA[<p>LaTeX 作为论文写作的常用工具，收到广大科研人员的欢迎。本文旨在记录本人使用 LaTeX 的方法、技巧以及遇到的问题，将长期更新。</p><a id="more"></a><h2 id="0-安装与配置-LaTeX-写作环境"><a href="#0-安装与配置-LaTeX-写作环境" class="headerlink" title="0 安装与配置 LaTeX 写作环境"></a>0 安装与配置 LaTeX 写作环境</h2><ul><li>安装用于中文科技排版的 <a href="http://www.ctex.org/HomePage" target="_blank" rel="noopener">CTeX</a> 套装。</li><li>安装用于编辑 LaTeX 的 <a href="http://texstudio.sourceforge.net" target="_blank" rel="noopener">TeXStudio</a> 软件。</li><li>将 TeXStudio 的 TeX 编译器设置为 XeLaTeX 以支持 CJK（默认的 PDFLaTeX 不支持 CJK）。</li></ul><h2 id="1-TeX-基础模版"><a href="#1-TeX-基础模版" class="headerlink" title="1 TeX 基础模版"></a>1 TeX 基础模版</h2><p>每个 TeX 文件一般都包含下列内容：</p><figure class="highlight tex hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">\<span class="hljs-name">documentclass</span><span class="hljs-string">&#123;article&#125;</span></span></span><br><span class="line"><span class="hljs-comment">% 使用宏包</span></span><br><span class="line"><span class="hljs-tag">\<span class="hljs-name">usepackage</span><span class="hljs-string">&#123;xeCJK&#125;</span></span> <span class="hljs-comment">% 适用于 XeLaTeX 编译器的中文支持宏包</span></span><br><span class="line"><span class="hljs-comment">% 使用其他宏包</span></span><br><span class="line"><span class="hljs-comment">% \usepackage&#123;...&#125;</span></span><br><span class="line"><span class="hljs-comment">% 其他导言区命令</span></span><br><span class="line"><span class="hljs-comment">% ...</span></span><br><span class="line"><span class="hljs-tag">\<span class="hljs-name">begin</span><span class="hljs-string">&#123;document&#125;</span></span></span><br><span class="line">    <span class="hljs-comment">% 其他内容</span></span><br><span class="line">    <span class="hljs-comment">% ...</span></span><br><span class="line"><span class="hljs-tag">\<span class="hljs-name">end</span><span class="hljs-string">&#123;document&#125;</span></span></span><br></pre></td></tr></table></figure><h2 id="2-字体"><a href="#2-字体" class="headerlink" title="2 字体"></a>2 字体</h2><h3 id="2-1-字体、字形与字号"><a href="#2-1-字体、字形与字号" class="headerlink" title="2.1 字体、字形与字号"></a>2.1 字体、字形与字号</h3><p>LaTeX 中，字体族分为三种：主要（罗马）、无衬线、等宽（打字机）。一般来说，正文默认使用主要字体，标题使用无衬线字体，代码使用等宽字体。</p><h4 id="2-1-1-全局修改对应族所使用的字体"><a href="#2-1-1-全局修改对应族所使用的字体" class="headerlink" title="2.1.1 全局修改对应族所使用的字体"></a>2.1.1 全局修改对应族所使用的字体</h4><p>（1）中文字体（注：中文必须使用 xeCJK 宏包，下同）</p><figure class="highlight tex hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">% 添加至导言区</span></span><br><span class="line"><span class="hljs-tag">\<span class="hljs-name">setCJKmainfont</span><span class="hljs-string">[ItalicFont=KaiTi]</span><span class="hljs-string">&#123;SimSun&#125;</span></span> <span class="hljs-comment">% 将宋体设置为中文主要字体，同时将楷体设置为倾斜的中文主要字体</span></span><br><span class="line"><span class="hljs-tag">\<span class="hljs-name">setCJKsansfont</span><span class="hljs-string">&#123;SimHei&#125;</span></span> <span class="hljs-comment">% 将黑体设置为中文无衬线字体</span></span><br><span class="line"><span class="hljs-tag">\<span class="hljs-name">setCJKmonofont</span><span class="hljs-string">&#123;YouYuan&#125;</span></span> <span class="hljs-comment">% 将幼圆设置为中文等宽字体</span></span><br></pre></td></tr></table></figure><p>（2）西文字体</p><figure class="highlight tex hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">% 添加至导言区</span></span><br><span class="line"><span class="hljs-tag">\<span class="hljs-name">setmainfont</span><span class="hljs-string">&#123;Times New Roman&#125;</span></span> <span class="hljs-comment">% 将 Times New Roman 设置为西文主要字体</span></span><br><span class="line"><span class="hljs-tag">\<span class="hljs-name">setsansfont</span><span class="hljs-string">&#123;Arial&#125;</span></span> <span class="hljs-comment">% 将 Arial 设置为西文无衬线字体</span></span><br><span class="line"><span class="hljs-tag">\<span class="hljs-name">setmonofont</span><span class="hljs-string">&#123;Courier New&#125;</span></span> <span class="hljs-comment">% 将 Courier New 设置为西文等宽字体</span></span><br></pre></td></tr></table></figure><h4 id="2-1-2-应用指定族"><a href="#2-1-2-应用指定族" class="headerlink" title="2.1.2 应用指定族"></a>2.1.2 应用指定族</h4><figure class="highlight tex hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">% 添加至正文区</span></span><br><span class="line"><span class="hljs-tag">\<span class="hljs-name">textrm</span><span class="hljs-string">&#123;text 文本&#125;</span></span> <span class="hljs-comment">% 使用主要（罗马）字体</span></span><br><span class="line"><span class="hljs-tag">\<span class="hljs-name">textsf</span><span class="hljs-string">&#123;text 文本&#125;</span></span> <span class="hljs-comment">% 使用无衬线字体</span></span><br><span class="line"><span class="hljs-tag">\<span class="hljs-name">texttt</span><span class="hljs-string">&#123;text 文本&#125;</span></span> <span class="hljs-comment">% 使用等宽（打字机）字体</span></span><br></pre></td></tr></table></figure><h3 id="2-2-颜色与下划线"><a href="#2-2-颜色与下划线" class="headerlink" title="2.2 颜色与下划线"></a>2.2 颜色与下划线</h3><h4 id="2-2-1-字体颜色"><a href="#2-2-1-字体颜色" class="headerlink" title="2.2.1 字体颜色"></a>2.2.1 字体颜色</h4><h4 id="2-2-2-下划线线型"><a href="#2-2-2-下划线线型" class="headerlink" title="2.2.2 下划线线型"></a>2.2.2 下划线线型</h4><h4 id="2-2-3-下划线颜色"><a href="#2-2-3-下划线颜色" class="headerlink" title="2.2.3 下划线颜色"></a>2.2.3 下划线颜色</h4><h4 id="2-2-4-着重号"><a href="#2-2-4-着重号" class="headerlink" title="2.2.4 着重号"></a>2.2.4 着重号</h4><h3 id="2-3-效果"><a href="#2-3-效果" class="headerlink" title="2.3 效果"></a>2.3 效果</h3><p>删除线、双删除线、上标、下标、小型大写字母、全部大写字母、隐藏</p><h3 id="2-4-字符间距"><a href="#2-4-字符间距" class="headerlink" title="2.4 字符间距"></a>2.4 字符间距</h3><p>缩放、间距、位置</p><h3 id="2-5-高级版式"><a href="#2-5-高级版式" class="headerlink" title="2.5 高级版式"></a>2.5 高级版式</h3><p>连字、数字间距、数字形式、样式集</p><h2 id="3-段落"><a href="#3-段落" class="headerlink" title="3 段落"></a>3 段落</h2><p>未完待续。</p>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;LaTeX作为论文写作的常用工具，收到广大科研人员的欢迎。本文旨在记录本人使用LaTeX的方法、技巧以及遇到的问题，将长期更新。&lt;/p&gt;
+      &lt;p&gt;LaTeX 作为论文写作的常用工具，收到广大科研人员的欢迎。本文旨在记录本人使用 LaTeX 的方法、技巧以及遇到的问题，将长期更新。&lt;/p&gt;
     
     </summary>
     
-      <category term="文章" scheme="https://aizhengpeng.cn/categories/articles/"/>
+      <category term="技术支持" scheme="https://aizhengpeng.cn/categories/support/"/>
     
     
       <category term="LaTeX" scheme="https://aizhengpeng.cn/tags/latex/"/>
@@ -91,17 +91,17 @@
   </entry>
   
   <entry>
-    <title>ACM计算机学分类系统</title>
+    <title>ACM 计算机学分类系统</title>
     <link href="https://aizhengpeng.cn/articles/acm-computing-classification-system/"/>
     <id>https://aizhengpeng.cn/articles/acm-computing-classification-system/</id>
     <published>2019-03-24T02:00:00.000Z</published>
-    <updated>2019-08-19T04:22:40.276Z</updated>
+    <updated>2019-08-19T04:48:49.348Z</updated>
     
-    <content type="html"><![CDATA[<p>ACM计算机学分类系统（CCS）是由国际计算机协会（ACM）设计的计算机学主题分类系统。该系统与数学主题分类（MSC）在范围、目的和结构上类似，被用于多种ACM期刊的分领域主题编排。</p><a id="more"></a><h2 id="历史"><a href="#历史" class="headerlink" title="历史"></a>历史</h2><p>该系统历经七个修订，初版发布于1964年，修订版本发表于1982年、1983年、1987年、1991年、1998年和2012年（现行版本）。</p><h2 id="结构"><a href="#结构" class="headerlink" title="结构"></a>结构</h2><ul><li>概述与参考（General and reference）<ul><li>文档类型（Document types）</li><li>交叉计算工具与技术（Cross-computing tools and techniques）</li></ul></li><li>硬件（Hardware）<ul><li>印刷电路板（Printed circuit boards）</li><li>通信硬件、接口与存储（Communication hardware, interfaces and storage）</li><li>集成电路（Integrated circuits）</li><li>超大规模集成设计（Very large scale integration design）</li><li>功率与能量（Power and energy）</li><li>电子设计自动化（Electronic design automation）</li><li>硬件验证（Hardware validation）</li><li>硬件测试（Hardware test）</li><li>稳健性（Robustness）</li><li>新兴技术（Emerging technologies）</li></ul></li><li>计算机系统组成（Computer systems organization）<ul><li>体系结构（Architectures）</li><li>嵌入式和网络物理系统（Embedded and cyber-physical systems）</li><li>实时系统（Real-time systems）</li><li>可分配和故障容忍系统与网络（Dependable and fault-tolerant systems and networks）</li></ul></li><li>网络（Networks）<ul><li>网络体系结构（Network architectures）</li><li>网络协议（Network protocols）</li><li>网络组件（Network components）</li><li>网络算法（Network algorithms）</li><li>网络性能评估（Network performance evaluation）</li><li>网络特性（Network properties）</li><li>网络服务（Network services）</li><li>网络类型（Network types）</li></ul></li><li>软件与软件工程（Software and its engineering）<ul><li>软件组成与特性（Software organization and properties）</li><li>软件符号与工具（Software notations and tools）</li><li>软件创造与管理（Software creation and management）</li></ul></li><li>计算理论（Theory of computation）<ul><li>计算模型（Models of computation）</li><li>形式语言与自动机理论（Formal languages and automata theory）</li><li>计算复杂性与密码学（Computational complexity and cryptography）</li><li>逻辑学（Logic）</li><li>算法设计与分析（Design and analysis of algorithms）</li><li>随机、几何学与离散结构（Randomness, geometry and discrete structures）</li><li>应用领域的理论与算法（Theory and algorithms for application domains）</li><li>语义学与推理（Semantics and reasoning）</li></ul></li><li>计算数学（Mathematics of computing）<ul><li>离散数学（Discrete mathematics）</li><li>概率与统计（Probability and statistics）</li><li>数学软件（Mathematical software）</li><li>信息论（Information theory）</li><li>数学分析（Mathematical analysis）</li><li>连续数学（Continuous mathematics）</li></ul></li><li>信息系统（Information systems）<ul><li>数据管理系统（Data management systems）</li><li>信息存储系统（Information storage systems）</li><li>信息系统应用（Information systems applications）</li><li>万维网（World Wide Web）</li><li>信息检索（Information retrieval）</li></ul></li><li>安全与隐私（Security and privacy）<ul><li>密码学（Cryptography）</li><li>正规的安全方法与理论（Formal methods and theory of security）</li><li>安全服务（Security services）</li><li>入侵/异常检测与恶意软件缓解（Intrusion/anomaly detection and malware mitigation）</li><li>硬件安全（Security in hardware）</li><li>系统安全（Systems security）</li><li>网络安全（Network security）</li><li>数据库与存储安全（Database and storage security）</li><li>软件与应用安全（Software and application security）</li><li>安全与隐私的人与社会方面（Human and societal aspects of security and privacy）</li></ul></li><li>以人为中心的计算（Human-centered computing）<ul><li>人机交互（Human–computer interaction）</li><li>交互设计（Interaction design）</li><li>协作与社会计算（Collaborative and social computing）</li><li>普适移动计算（Ubiquitous and mobile computing）</li><li>虚拟化（Visualization）</li><li>可访问性（Accessibility）</li></ul></li><li>计算方法（Computing methodologies）<ul><li>符号和代数操作（Symbolic and algebraic manipulation）</li><li>并行计算方法（Parallel computing methodologies）</li><li>人工智能（Artificial intelligence）</li><li>机器学习（Machine learning）</li><li>建模与模拟（Modeling and simulation）</li><li>计算机图形（Computer graphics）</li><li>分布式计算方法（Distributed computing methodologies）</li><li>量子计算方法（Concurrent computing methodologies）</li></ul></li><li>应用计算（Applied computing）<ul><li>电子商务（Electronic commerce）</li><li>企业计算（Enterprise computing）</li><li>物理科学与工程（Physical sciences and engineering）</li><li>生命与医学（Life and medical sciences）</li><li>法律、社会与行为科学（Law, social and behavioral sciences）</li><li>计算机取证（Computer forensics）</li><li>艺术与人文（Arts and humanities）</li><li>其他领域中的计算机（Computers in other domains）</li><li>运筹学（Operations research）</li><li>教育（Education）</li><li>文档管理与文本处理（Document management and text processing）</li></ul></li><li>社会与专业主题（Social and professional topics）<ul><li>专业主题（Professional topics）</li><li>计算/技术政策（Computing/technology policy）</li><li>用户特征（User characteristics）</li></ul></li><li>适当名词：人员、技术与公司（Proper nouns: people, technologies and companies）<ul><li>公司（Companies）</li><li>组织（Organizations）</li><li>从事计算机工作的人员（People in computing）</li><li>技术（Technologies）</li></ul></li></ul><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ul><li><a href="https://www.acm.org/publications/class-2012" target="_blank" rel="noopener">The 2012 ACM Computing Classification System</a></li><li><a href="https://en.wikipedia.org/wiki/ACM_Computing_Classification_System" target="_blank" rel="noopener">ACM Computing Classification System - Wikipedia</a></li></ul>]]></content>
+    <content type="html"><![CDATA[<p>ACM 计算机学分类系统（CCS）是由国际计算机协会（ACM）设计的计算机学主题分类系统。该系统与数学主题分类（MSC）在范围、目的和结构上类似，被用于多种 ACM 期刊的分领域主题编排。</p><a id="more"></a><h2 id="历史"><a href="#历史" class="headerlink" title="历史"></a>历史</h2><p>该系统历经七个修订，初版发布于 1964 年，修订版本发表于 1982 年、1983 年、1987 年、1991 年、1998 年和 2012 年（现行版本）。</p><h2 id="结构"><a href="#结构" class="headerlink" title="结构"></a>结构</h2><ul><li>概述与参考（General and reference）<ul><li>文档类型（Document types）</li><li>交叉计算工具与技术（Cross-computing tools and techniques）</li></ul></li><li>硬件（Hardware）<ul><li>印刷电路板（Printed circuit boards）</li><li>通信硬件、接口与存储（Communication hardware, interfaces and storage）</li><li>集成电路（Integrated circuits）</li><li>超大规模集成设计（Very large scale integration design）</li><li>功率与能量（Power and energy）</li><li>电子设计自动化（Electronic design automation）</li><li>硬件验证（Hardware validation）</li><li>硬件测试（Hardware test）</li><li>稳健性（Robustness）</li><li>新兴技术（Emerging technologies）</li></ul></li><li>计算机系统组成（Computer systems organization）<ul><li>体系结构（Architectures）</li><li>嵌入式和网络物理系统（Embedded and cyber-physical systems）</li><li>实时系统（Real-time systems）</li><li>可分配和故障容忍系统与网络（Dependable and fault-tolerant systems and networks）</li></ul></li><li>网络（Networks）<ul><li>网络体系结构（Network architectures）</li><li>网络协议（Network protocols）</li><li>网络组件（Network components）</li><li>网络算法（Network algorithms）</li><li>网络性能评估（Network performance evaluation）</li><li>网络特性（Network properties）</li><li>网络服务（Network services）</li><li>网络类型（Network types）</li></ul></li><li>软件与软件工程（Software and its engineering）<ul><li>软件组成与特性（Software organization and properties）</li><li>软件符号与工具（Software notations and tools）</li><li>软件创造与管理（Software creation and management）</li></ul></li><li>计算理论（Theory of computation）<ul><li>计算模型（Models of computation）</li><li>形式语言与自动机理论（Formal languages and automata theory）</li><li>计算复杂性与密码学（Computational complexity and cryptography）</li><li>逻辑学（Logic）</li><li>算法设计与分析（Design and analysis of algorithms）</li><li>随机、几何学与离散结构（Randomness, geometry and discrete structures）</li><li>应用领域的理论与算法（Theory and algorithms for application domains）</li><li>语义学与推理（Semantics and reasoning）</li></ul></li><li>计算数学（Mathematics of computing）<ul><li>离散数学（Discrete mathematics）</li><li>概率与统计（Probability and statistics）</li><li>数学软件（Mathematical software）</li><li>信息论（Information theory）</li><li>数学分析（Mathematical analysis）</li><li>连续数学（Continuous mathematics）</li></ul></li><li>信息系统（Information systems）<ul><li>数据管理系统（Data management systems）</li><li>信息存储系统（Information storage systems）</li><li>信息系统应用（Information systems applications）</li><li>万维网（World Wide Web）</li><li>信息检索（Information retrieval）</li></ul></li><li>安全与隐私（Security and privacy）<ul><li>密码学（Cryptography）</li><li>正规的安全方法与理论（Formal methods and theory of security）</li><li>安全服务（Security services）</li><li>入侵/异常检测与恶意软件缓解（Intrusion/anomaly detection and malware mitigation）</li><li>硬件安全（Security in hardware）</li><li>系统安全（Systems security）</li><li>网络安全（Network security）</li><li>数据库与存储安全（Database and storage security）</li><li>软件与应用安全（Software and application security）</li><li>安全与隐私的人与社会方面（Human and societal aspects of security and privacy）</li></ul></li><li>以人为中心的计算（Human-centered computing）<ul><li>人机交互（Human–computer interaction）</li><li>交互设计（Interaction design）</li><li>协作与社会计算（Collaborative and social computing）</li><li>普适移动计算（Ubiquitous and mobile computing）</li><li>虚拟化（Visualization）</li><li>可访问性（Accessibility）</li></ul></li><li>计算方法（Computing methodologies）<ul><li>符号和代数操作（Symbolic and algebraic manipulation）</li><li>并行计算方法（Parallel computing methodologies）</li><li>人工智能（Artificial intelligence）</li><li>机器学习（Machine learning）</li><li>建模与模拟（Modeling and simulation）</li><li>计算机图形（Computer graphics）</li><li>分布式计算方法（Distributed computing methodologies）</li><li>量子计算方法（Concurrent computing methodologies）</li></ul></li><li>应用计算（Applied computing）<ul><li>电子商务（Electronic commerce）</li><li>企业计算（Enterprise computing）</li><li>物理科学与工程（Physical sciences and engineering）</li><li>生命与医学（Life and medical sciences）</li><li>法律、社会与行为科学（Law, social and behavioral sciences）</li><li>计算机取证（Computer forensics）</li><li>艺术与人文（Arts and humanities）</li><li>其他领域中的计算机（Computers in other domains）</li><li>运筹学（Operations research）</li><li>教育（Education）</li><li>文档管理与文本处理（Document management and text processing）</li></ul></li><li>社会与专业主题（Social and professional topics）<ul><li>专业主题（Professional topics）</li><li>计算/技术政策（Computing/technology policy）</li><li>用户特征（User characteristics）</li></ul></li><li>适当名词：人员、技术与公司（Proper nouns: people, technologies and companies）<ul><li>公司（Companies）</li><li>组织（Organizations）</li><li>从事计算机工作的人员（People in computing）</li><li>技术（Technologies）</li></ul></li></ul><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ul><li><a href="https://www.acm.org/publications/class-2012" target="_blank" rel="noopener">The 2012 ACM Computing Classification System</a></li><li><a href="https://en.wikipedia.org/wiki/ACM_Computing_Classification_System" target="_blank" rel="noopener">ACM Computing Classification System - Wikipedia</a></li></ul>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;ACM计算机学分类系统（CCS）是由国际计算机协会（ACM）设计的计算机学主题分类系统。该系统与数学主题分类（MSC）在范围、目的和结构上类似，被用于多种ACM期刊的分领域主题编排。&lt;/p&gt;
+      &lt;p&gt;ACM 计算机学分类系统（CCS）是由国际计算机协会（ACM）设计的计算机学主题分类系统。该系统与数学主题分类（MSC）在范围、目的和结构上类似，被用于多种 ACM 期刊的分领域主题编排。&lt;/p&gt;
     
     </summary>
     
@@ -115,11 +115,11 @@
   </entry>
   
   <entry>
-    <title>如何开办个人网站</title>
-    <link href="https://aizhengpeng.cn/articles/how-to-start-a-personal-website/"/>
-    <id>https://aizhengpeng.cn/articles/how-to-start-a-personal-website/</id>
+    <title>开办个人网站</title>
+    <link href="https://aizhengpeng.cn/support/start-a-personal-website/"/>
+    <id>https://aizhengpeng.cn/support/start-a-personal-website/</id>
     <published>2019-03-08T14:00:00.000Z</published>
-    <updated>2019-08-19T04:23:57.736Z</updated>
+    <updated>2019-08-19T04:35:03.244Z</updated>
     
     <content type="html"><![CDATA[<p>如今，许多人希望能够在网上分享自己的技术经验、心得体会、日常生活、学术研究等。开办一个属于自己的个人网站是其中一种方式。那么，如何在境内合法、合规、正确的开办个人网站呢？本文旨在提供笔者开设个人网站的经历，供其他希望开办个人网站的朋友参考。</p><a id="more"></a><h2 id="注册域名"><a href="#注册域名" class="headerlink" title="注册域名"></a>注册域名</h2><p>首先需要为个人网站注册一个体现个人身份或简单好记的域名。这需要通过域名注册商来进行，如：<a href="https://wanwang.aliyun.com" target="_blank" rel="noopener">万网</a>等。先搜索自己希望注册的域名，可以选择带有不同后缀的域名，如：.cn、.com等，国内注册.cn域名较为便宜，也可以根据个人情况选择其他后缀。需要注意新注册和续费的价格。</p><h2 id="购买或租赁服务器"><a href="#购买或租赁服务器" class="headerlink" title="购买或租赁服务器"></a>购买或租赁服务器</h2><p>其次需要一个服务器来部署网站。一般不会考虑自己购买一个实体服务器，考虑购买云服务器较为合适。可以在<a href="https://www.aliyun.com/product/ecs" target="_blank" rel="noopener">阿里云</a>等网站购买云服务器ECS。另外注意云服务器的价格对学生是极其优惠的，学生一定要充分使用这一优惠政策。云服务器的操作系统可以根据自身需要进行选择，如果不是要搭建基于C#.NET的网站，一般建议选择Linux操作系统的发行版，如Ubuntu、CentOS等。</p><h2 id="进行ICP备案"><a href="#进行ICP备案" class="headerlink" title="进行ICP备案"></a>进行ICP备案</h2><p>《互联网信息服务管理办法》指出互联网信息服务分为经营性和非经营性两类。国家对经营性互联网信息服务实行许可制度；对非经营性互联网信息服务实行备案制度。未取得许可或者未履行备案手续的，不得从事互联网信息服务。</p><p>对于个人网站这类提供非经营性互联网信息服务的，需要进行ICP备案。备案一般通过购买云服务器的网站进行，如<a href="https://beian.aliyun.com" target="_blank" rel="noopener">阿里云的备案系统</a>。根据相关流程指引完成信息填写并通过管局审核（约20个工作日），即可获得ICP备案号。</p><h2 id="进行公安备案"><a href="#进行公安备案" class="headerlink" title="进行公安备案"></a>进行公安备案</h2><p>根据《计算机信息网络国际联网安全保护管理办法》，互联单位、接入单位、使用计算机信息网络国际联网的法人和其他组织（包括跨省、自治区、直辖市联网的单位和所属的分支机构），应当自网络正式联通之日起三十日内，到所在地的省、自治区、直辖市人民政府公安机关指定的受理机关办理备案手续。</p><p>办理公安备案需要自行前往<a href="http://www.beian.gov.cn" target="_blank" rel="noopener">全国互联网安全管理服务平台</a>进行。根据相关流程指引完成信息填写（可以参考云服务器网站提供的教程文档来填写接入商等信息）并通过网安部门审核，即可获得公安备案号。</p><h2 id="安装必备组件"><a href="#安装必备组件" class="headerlink" title="安装必备组件"></a>安装必备组件</h2><p>在Ubuntu等Linux操作系统上安装Apache等组件，是服务器对外提供服务所必需的。此外，如果网站使用PHP编写还需要PHP组件，需要启用数据库服务还需要MySQL等数据库组件。需要根据实际情况安装合适的组件。如何安装这些组件建议参考相关教程。安装完成后可能还需要进行相关的配置。</p><h2 id="编写并上传网页文件"><a href="#编写并上传网页文件" class="headerlink" title="编写并上传网页文件"></a>编写并上传网页文件</h2><p>将你需要呈现的网页编写好，并上传到服务器上的指定文件夹中。为方便起见，如果网站不涉及动态交互，可以采用<a href="https://github.com" target="_blank" rel="noopener">GitHub</a>等版本控制工具进行托管，便于部署、更新等操作。</p><h2 id="添加HTTPS保护"><a href="#添加HTTPS保护" class="headerlink" title="添加HTTPS保护"></a>添加HTTPS保护</h2><p>如果想使用免费的SSL证书，建议参考<a href="https://letsencrypt.org" target="_blank" rel="noopener">Let’s Encrypt</a>网站。如果财力充足，可以考虑购买商用SSL证书。</p>]]></content>
     
@@ -129,7 +129,7 @@
     
     </summary>
     
-      <category term="文章" scheme="https://aizhengpeng.cn/categories/articles/"/>
+      <category term="技术支持" scheme="https://aizhengpeng.cn/categories/support/"/>
     
     
       <category term="个人网站" scheme="https://aizhengpeng.cn/tags/personal-website/"/>
@@ -137,7 +137,7 @@
   </entry>
   
   <entry>
-    <title>项目：基于以太坊区块链应用集成开发环境</title>
+    <title>基于以太坊区块链应用集成开发环境</title>
     <link href="https://aizhengpeng.cn/news/ethereum-based-blockchain-application-ide/"/>
     <id>https://aizhengpeng.cn/news/ethereum-based-blockchain-application-ide/</id>
     <published>2018-12-31T16:00:00.000Z</published>
@@ -159,6 +159,110 @@
       <category term="区块链" scheme="https://aizhengpeng.cn/tags/blockchain/"/>
     
       <category term="IDE" scheme="https://aizhengpeng.cn/tags/ide/"/>
+    
+      <category term="项目" scheme="https://aizhengpeng.cn/tags/project/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>在Visual Studio中手动配置Qt项目</title>
+    <link href="https://aizhengpeng.cn/support/manually-configure-qt-project-in-visual-studio/"/>
+    <id>https://aizhengpeng.cn/support/manually-configure-qt-project-in-visual-studio/</id>
+    <published>2018-10-15T04:00:00.000Z</published>
+    <updated>2019-08-19T05:09:26.079Z</updated>
+    
+    <content type="html"><![CDATA[<a id="more"></a>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+
+      
+    
+    </summary>
+    
+      <category term="技术支持" scheme="https://aizhengpeng.cn/categories/support/"/>
+    
+    
+      <category term="Windows" scheme="https://aizhengpeng.cn/tags/windows/"/>
+    
+      <category term="Visual Studio" scheme="https://aizhengpeng.cn/tags/visual-studio/"/>
+    
+      <category term="Qt" scheme="https://aizhengpeng.cn/tags/qt/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>处理计算机中丢失 DLL 的系统错误</title>
+    <link href="https://aizhengpeng.cn/support/deal-with-system-error-dll-is-missing-from-your-computer/"/>
+    <id>https://aizhengpeng.cn/support/deal-with-system-error-dll-is-missing-from-your-computer/</id>
+    <published>2018-10-13T14:30:00.000Z</published>
+    <updated>2019-08-19T05:05:56.481Z</updated>
+    
+    <content type="html"><![CDATA[<p>本文给出了计算机中丢失 DLL 的解决方案。</p><a id="more"></a><h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>在微软 Windows 操作系统上安装和运行应用程序时，常常会遇到下述格式的系统错误： “<strong>无法启动此程序，因为计算机中丢失 xxx.dll。尝试重新安装该程序以解决此问题。</strong>” 这意味着系统缺失该应用程序运行所必需的 DLL，即动态链接库。</p><h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>碰到这种错误，很多人的第一想法是在百度中搜索该动态链接库的名称，找到百度搜索中提供的某些下载链接来下载。直接这么做是绝对不提倡的。因为这样无法保障所下载的 DLL 是源自于官方的，有可能被别有用心的人修改过，植入一些恶意代码，或者所下载的不是最新版本的 DLL，有可能存在一些安全漏洞，但在官方提供的最新版本中修复了。</p><p>那么，遇到这种情况应该怎么解决呢？</p><h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>首先可以通过百度了解更多信息，例如该 DLL 来自于哪家公司的什么组件或应用程序。然后根据缺失的 DLL 的来源不同，我们会有不同的应对方式。</p><h3 id="来自微软的-DLL"><a href="#来自微软的-DLL" class="headerlink" title="来自微软的 DLL"></a>来自微软的 DLL</h3><p>常见的来自微软的 DLL，通常以 VC/MFC 等开头，后缀名前还又可能含有版本号信息，如 140、100、71 等。</p><ul><li><strong>VC 开头的 DLL 一般来自于 Visual C++ 可再发行程序包</strong>，如：VCRUNTIME140.dll 等。通过版本号信息可以知道对应的 Visual Studio 版本：140（VS2017）、130（VS2015）、120（VS2013）、110（VS2012）、100（VS2010）、90（VS2008）、80（VS2005）等。</li><li><strong>MFC 开头的 DLL 一般来自于多字节 MFC 库</strong>，如 MFC71.dll 等。版本信息基本上与 VC 开头的 DLL 一致。</li><li><strong>其他来自微软的DLL</strong>。</li></ul><p>缺失这类DLL一定要从微软官方网站上下载对应版本的安装包，此处附上相应的微软支持网页：<a href="https://support.microsoft.com/zh-cn/help/2977003/the-latest-supported-visual-c-downloads" target="_blank" rel="noopener">最新支持的 Visual C++ 下载</a>。其他来自微软的 DLL 可以从微软下载中心进行检索并下载，同样附上网页：<a href="https://www.microsoft.com/zh-cn/download" target="_blank" rel="noopener">Microsoft 下载中心</a>。</p><h3 id="来自第三方的DLL"><a href="#来自第三方的DLL" class="headerlink" title="来自第三方的DLL"></a>来自第三方的DLL</h3><p>如果是来自第三方的 DLL，也一定不要图省事从百度搜索出来的那些所谓的某某下载站来下载。一般来说，DLL 的开发公司官方网站上会提供应用程序或组件的下载地址。从官方网站下载的 DLL，才能够放心使用，你说对嘛？</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本文给出了计算机中丢失 DLL 的解决方案。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="技术支持" scheme="https://aizhengpeng.cn/categories/support/"/>
+    
+    
+      <category term="Windows" scheme="https://aizhengpeng.cn/tags/windows/"/>
+    
+      <category term="DLL" scheme="https://aizhengpeng.cn/tags/dll/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>处理 xrun 错误：活跃开发者工具路径不存在</title>
+    <link href="https://aizhengpeng.cn/support/deal-with-error-active-developer-path-does-not-exist/"/>
+    <id>https://aizhengpeng.cn/support/deal-with-error-active-developer-path-does-not-exist/</id>
+    <published>2018-10-10T15:30:00.000Z</published>
+    <updated>2019-08-19T05:00:19.860Z</updated>
+    
+    <content type="html"><![CDATA[<p>本文将给出 Xcode 升级后可能出现的问题的解决方案。</p><a id="more"></a><h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>macOS Mojave 发布后，本人将 MacBook Pro 从 macOS High Sierra 升级到了新系统，同时也安装了 Xcode 最新版本。但最近在尝试使用 git、gcc 等命令行程序时，出现了如下所示的错误：</p><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xcrun: error: active developer path (&quot;/Applications/Xcode.app/Contents/Developer&quot;) does not exist, use xcode-select --switch path/to/Xcode.app to specify the Xcode that you wish to use for command line developer tools (or see man xcode-select)</span><br></pre></td></tr></table></figure><p>这个问题导致无法正常使用 CLion 等常用的集成开发环境，因为这些软件均使用到一些命令行程序。</p><h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>这是由于 macOS 或 Xcode 升级后，Xcode 开发者工具的位置发生了变化造成的。</p><h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>在终端中运行：<code>sudo xcode-select --reset</code> 重置 Xcode 开发者工具位置即可。</p><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ul><li><a href="https://stackoverflow.com/questions/35009531/xcrun-error-active-developer-path-applications-xcode-app-contents-developer/" target="_blank" rel="noopener">“xcrun: error: active developer path (“/Applications/Xcode.app/Contents/Developer”) does not exist - Stack Overflow”</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本文将给出 Xcode 升级后可能出现的问题的解决方案。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="技术支持" scheme="https://aizhengpeng.cn/categories/support/"/>
+    
+    
+      <category term="macOS" scheme="https://aizhengpeng.cn/tags/macos/"/>
+    
+      <category term="Xcode" scheme="https://aizhengpeng.cn/tags/xcode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>在 Windows 上安装 OpenSSL</title>
+    <link href="https://aizhengpeng.cn/support/install-openssl-on-windows/"/>
+    <id>https://aizhengpeng.cn/support/install-openssl-on-windows/</id>
+    <published>2018-10-09T11:00:00.000Z</published>
+    <updated>2019-08-19T04:46:13.042Z</updated>
+    
+    <content type="html"><![CDATA[<p>本文将介绍在 Windows 操作系统上安装 OpenSSL 的方法已经相关问题的解决方案。</p><a id="more"></a><h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><ul><li>下载并解压 <a href="https://www.openssl.org" target="_blank" rel="noopener">OpenSSL</a> 的源代码（例如：<a href="https://www.openssl.org/source/openssl-1.1.1.tar.gz" target="_blank" rel="noopener">1.1.1</a>）。</li><li>下载并安装 <a href="http://strawberryperl.com" target="_blank" rel="noopener">Strawberry Perl</a>（例如：<a href="http://strawberryperl.com/download/5.28.0.1/strawberry-perl-5.28.0.1-64bit.msi" target="_blank" rel="noopener">5.28.0.1 x64</a>）。</li><li>下载并安装 <a href="https://visualstudio.microsoft.com" target="_blank" rel="noopener">Visual Studio 2017</a>（例如：<a href="https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&amp;rel=15" target="_blank" rel="noopener">Community</a>）。</li><li><p>下载并安装 <a href="https://www.nasm.us" target="_blank" rel="noopener">NASM</a>（例如：<a href="https://www.nasm.us/pub/nasm/releasebuilds/2.13.03/win64/nasm-2.13.03-installer-x64.exe" target="_blank" rel="noopener">2.13.03 x64</a>）。你可能需要手动将 NASM 的安装路径添加到 PATH。</p><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2></li><li><p>在开始菜单以管理员身份运行 <strong>VS2017 开发者命令行工具</strong>。</p></li><li><p>将当前路径更改到 OpenSSL 源代码解压到的路径。</p></li><li><p>依次运行下列命令：</p><figure class="highlight powershell hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">perl Configure VC-WIN32</span><br><span class="line">nmake</span><br><span class="line">nmake test</span><br><span class="line">nmake install</span><br></pre></td></tr></table></figure><p><code>`</code></p></li><li><p>将 “<strong>C:\Program Files (x86)\OpenSSL\bin</strong>“ 添加到 PATH。</p></li></ul><h2 id="问题与解决方案"><a href="#问题与解决方案" class="headerlink" title="问题与解决方案"></a>问题与解决方案</h2><ul><li>运行 “<code>perl Configure VC-WIN32</code>“ 时失败。尝试用 “<code>perl Configure VC-WIN32 no-asm</code>“ 替代运行。</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本文将介绍在 Windows 操作系统上安装 OpenSSL 的方法已经相关问题的解决方案。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="技术支持" scheme="https://aizhengpeng.cn/categories/support/"/>
+    
+    
+      <category term="Windows" scheme="https://aizhengpeng.cn/tags/windows/"/>
+    
+      <category term="OpenSSL" scheme="https://aizhengpeng.cn/tags/openssl/"/>
     
   </entry>
   
