@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://aizhengpeng.cn/"/>
-  <updated>2019-08-19T04:24:45.593Z</updated>
+  <updated>2019-08-20T06:04:22.273Z</updated>
   <id>https://aizhengpeng.cn/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>笔记：交互式信誉系统（更新中）</title>
+    <title>笔记：交互式信誉系统</title>
     <link href="https://aizhengpeng.cn/articles/notes-interactive-reputation-systems/"/>
     <id>https://aizhengpeng.cn/articles/notes-interactive-reputation-systems/</id>
     <published>2019-08-05T14:30:00.000Z</published>
-    <updated>2019-08-19T04:24:45.593Z</updated>
+    <updated>2019-08-20T06:04:22.273Z</updated>
     
     <content type="html"><![CDATA[<p>英文标题：Interactive Reputation Systems - How to Cope with Malicious Behavior in Feedback Mechanisms</p><p>中文标题：交互式信誉系统——在反馈机制中如何应对恶意行为</p><p>DOI: <a href="https://doi.org/10.1007/s12599-017-0493-1" target="_blank" rel="noopener">10.1007/s12599-017-0493-1</a></p><a id="more"></a><p>定义：交互式信誉系统是一种允许用户动态调节潜在计算机制的信誉系统。</p><p>（未完待续）</p>]]></content>
     

@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://aizhengpeng.cn/articles/notes-interactive-reputation-systems/</loc>
+    <lastmod>2019-08-20</lastmod>
+  </url>  <url>
     <loc>https://aizhengpeng.cn/support/manually-configure-qt-project-in-visual-studio/</loc>
     <lastmod>2019-08-19</lastmod>
   </url>  <url>
@@ -20,9 +23,6 @@
     <lastmod>2019-08-19</lastmod>
   </url>  <url>
     <loc>https://aizhengpeng.cn/download/templates-of-neu-bachelor-thesis/</loc>
-    <lastmod>2019-08-19</lastmod>
-  </url>  <url>
-    <loc>https://aizhengpeng.cn/articles/notes-interactive-reputation-systems/</loc>
     <lastmod>2019-08-19</lastmod>
   </url>  <url>
     <loc>https://aizhengpeng.cn/news/ethereum-based-blockchain-application-ide/</loc>
