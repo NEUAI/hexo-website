@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>小艾的个人主页</title>
+  <title>小艾的技术栈</title>
   
-  <subtitle>Ai&#39;s Website</subtitle>
+  <subtitle>Ai&#39;s Techstack</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://aizhengpeng.cn/"/>
