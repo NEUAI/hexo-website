@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://aizhengpeng.cn/"/>
-  <updated>2019-08-20T06:04:22.273Z</updated>
+  <updated>2019-11-27T16:12:42.727Z</updated>
   <id>https://aizhengpeng.cn/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>我的个人计算机 DIY</title>
+    <link href="https://aizhengpeng.cn/articles/my-pc-diy/"/>
+    <id>https://aizhengpeng.cn/articles/my-pc-diy/</id>
+    <published>2019-11-27T16:00:00.000Z</published>
+    <updated>2019-11-27T16:12:42.727Z</updated>
+    
+    <content type="html"><![CDATA[<p>我的个人计算机 DIY 方案</p><a id="more"></a><p><img src="/figure-1.png" alt="我的个人计算机 DIY 方案"></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;我的个人计算机 DIY 方案&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="文章" scheme="https://aizhengpeng.cn/categories/articles/"/>
+    
+    
+      <category term="计算机" scheme="https://aizhengpeng.cn/tags/computer/"/>
+    
+      <category term="DIY" scheme="https://aizhengpeng.cn/tags/diy/"/>
+    
+  </entry>
   
   <entry>
     <title>笔记：交互式信誉系统</title>
@@ -108,7 +132,7 @@
       <category term="文章" scheme="https://aizhengpeng.cn/categories/articles/"/>
     
     
-      <category term="计算机" scheme="https://aizhengpeng.cn/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
+      <category term="计算机" scheme="https://aizhengpeng.cn/tags/computer/"/>
     
       <category term="分类系统" scheme="https://aizhengpeng.cn/tags/classification-system/"/>
     
